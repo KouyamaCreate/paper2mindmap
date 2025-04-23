@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Flowchart</title> <!-- タイトル変更 -->
+    <style>
+        /* 基本的なbodyスタイルとコンテナスタイル */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            font-size: 13px; /* 基本フォントサイズ */
+        }
+        /* フローチャート用の基本スタイル */
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon {
+            fill: #f9f9f9; /* ノード背景を少しグレーに */
+            stroke: #999;  /* 枠線 */
+            stroke-width: 1px;
+        }
+        .mermaid .edgePath path {
+            stroke: #666; /* 線の色を少し濃く */
+            stroke-width: 1px;
+        }
+        /* 古い指定をコメントアウト */
+        .flowchart-link { /* ユーザー提示のセレクタとプロパティを使用 */
+            marker-end: none !important;
+        }
+         .mermaid .node .label {
+            color: #333; /* テキスト色 */
+            font-size: 13px;
+        }
+        /* マインドマップ用の .level-0 スタイルは削除 */
+    </style>
+</head>
+<body>
+    <h1>Generated Mindmap</h1>
+    <div class="mermaid">
+graph LR
+    A[High&Load] --> B(NASA-TLX);
+    A --> C(タスク負荷);
+    B --> B1[評価基準];
+    B --> B2[スコア計算];
+    C --> C1[負荷の測定];
+    C --> C2[結果の分析];
+    C1 --> C1a[心理的負荷];
+    C1 --> C1b[身体的負荷];
+    C2 --> C2a[パフォーマンス];
+    C2 --> C2b[ストレスレベル];
+    </div>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>

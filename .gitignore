@@ -1,0 +1,18 @@
+# 環境変数ファイル
+.env
+
+# Pythonキャッシュファイル
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/エディタ設定ファイル
+.vscode/
+.idea/
+
+# 依存関係フォルダ (venvなど)
+venv/
+.venv/
+env/
+.env/
